@@ -6,7 +6,7 @@ measures = [
     "properties.temperature.values.@date=validTime.value",
     "properties.dewpoint.values.@date=validTime.value",
     "properties.apparentTemperature.values.@date=validTime.value",
-    "properties.probabilityOfPrecipitation.values.@date=validTime.value"
+    "properties.probabilityOfPrecipitation.values.@date=validTime.value",
     "properties.visibility.values.@date=validTime.value",
     "properties.lightningActivityLevel.values.@date=validTime.value"
             ]

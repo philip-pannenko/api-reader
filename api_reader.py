@@ -1,3 +1,5 @@
+import json
+
 import requests
 import arrow
 
@@ -46,6 +48,7 @@ def read_api(url, date_time_range, measures):
                 # drill down further
                 data_piece = data_piece[nav[step]]
 
+    # return json.dumps(values)
     return values
 
 
@@ -85,10 +88,15 @@ def find_relevant(date_time_range, date_keyword, val_keyword, values):
         time_range = values[i][date_keyword].split("/")
 
         start = arrow.get(time_range[0])
-        span = 0
+        days = 0
+        hours = 0
         if len(time_range) > 1:
-            span = int(time_range[1][2:-1]) # e.g. if it's PT1H, span = 1
-        end = start.shift(hours=span)
+            period = time_range[1]
+            if (period[-1] == "D"):
+                days = int(period[1:-1])
+            if (period[:2] =="PT"):
+                hours = int(period[2:-1]) # e.g. if it's PT1H, span = 1
+            end = start.shift(days=days, hours=hours)
 
         if start <= date_time_range[0] and end >= date_time_range[1]:
             valid_indicies.append(i)
