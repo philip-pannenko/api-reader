@@ -97,6 +97,7 @@ def find_relevant(date_time_range, date_keyword, val_keyword, values):
             if (period[:2] =="PT"):
                 hours = int(period[2:-1]) # e.g. if it's PT1H, span = 1
             end = start.shift(days=days, hours=hours)
+            # TODO -- need to cover the case of P1TD12H or whatever it is
 
         if start <= date_time_range[0] and end >= date_time_range[1]:
             valid_indicies.append(i)
