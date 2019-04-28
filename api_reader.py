@@ -29,9 +29,9 @@ def read_api(url, date_time_range, measures):
                 # found the value we're looking for
                 values[measure] = data_piece
 
-            elif nav[step][:4] == "@date":
+            elif nav[step][:5] == "@date":
                 # find the value that has the date time overlap provided
-                values[measure] = find_relevant(date_time_range, nav[step][4:], nav[step+1], data_piece)
+                values[measure] = find_relevant(date_time_range, nav[step][6:], nav[step+1], data_piece)
                 # values[measure] = data_piece[nav[step+1]] # temp, just return the bucket of data
                 break
 
@@ -77,12 +77,14 @@ def find_relevant(date_time_range, date_keyword, val_keyword, values):
     :return: a single value encompassing the date_time_range
     """
     result = ""
+    date_time_range[0] = arrow.get(date_time_range[0])
+    date_time_range[1] = arrow.get(date_time_range[1])
 
     valid_indicies = []
     for i in range(len(values)):
         time_range = values[i][date_keyword].split("/")
 
-        start = arrow.get(range[0])
+        start = arrow.get(time_range[0])
         span = 0
         if len(time_range) > 1:
             span = int(time_range[1][2:-1]) # e.g. if it's PT1H, span = 1
