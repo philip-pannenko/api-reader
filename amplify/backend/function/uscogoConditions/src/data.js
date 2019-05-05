@@ -7,7 +7,7 @@ exports.Measures = [
     {display: "Lightning %", category: 'lightningChance', code: "properties.lightningActivityLevel.values", unit: ''},
 ];
 
-exports.Facts = {
+exports.TestFacts = {
     '2019-05-01T11:00:00-04:00': {
         "airTemp": 11,
         "feelsLike": 12,
