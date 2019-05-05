@@ -57,8 +57,8 @@ class App extends Component {
                 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
                     <Tab eventKey="home" title="Upcoming Swims">
                         <ListGroup variant="flush">
-                            {events.map((event) =>
-                                <EventRow key={event.id} event={event}/>
+                            {events.map((event, i) =>
+                                <EventRow key={i} event={event}/>
                             )}
                         </ListGroup>
                     </Tab>
@@ -159,10 +159,8 @@ class EventRow extends Component {
                         <h5 className="mb-1">{event.start}</h5>
 
                         {event.reason.map((property, i) =>
-                            <>
-                                property===null ? null : <Badge key={i} className="mr-1"
-                                                                variant="primary">{property.display}: {property.value}</Badge>
-                            </>
+                            <Badge key={i} className="mr-1"
+                                   variant="primary">{property.display}: {property.value}</Badge>
                         )}
 
                         <Badge className="mr-1" variant="primary">Going: -- </Badge>

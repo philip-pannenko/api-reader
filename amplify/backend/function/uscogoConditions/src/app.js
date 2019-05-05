@@ -117,6 +117,7 @@ const runRulesEngine = (facts, rules) => {
                 if (events.length && events[0].type === 'success') {
 
                     // bills.map(bill => bill.category)
+                    delete fact['success-events'];
                     let result = Object.keys(fact).map(property => {
                         let measure= Measures.find((prop) => prop.category === property );
                         if (measure) {
