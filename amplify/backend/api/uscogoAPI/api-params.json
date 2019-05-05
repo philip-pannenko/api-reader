@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/conditions",
+            "lambdaFunction": "uscogoConditions",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "uscogoAPI",
+    "apiName": "uscogoAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "uscogoConditions"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "uscogo-20190502083522-authRole",
+        "unAuthRoleName": "uscogo-20190502083522-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "uscogoConditions",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

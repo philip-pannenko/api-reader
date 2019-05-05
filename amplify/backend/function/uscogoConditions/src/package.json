@@ -1,0 +1,22 @@
+{
+  "name": "uscogoConditions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.5",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "json-rules-engine": "^2.3.5",
+    "lodash.get": "^4.4.2",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
