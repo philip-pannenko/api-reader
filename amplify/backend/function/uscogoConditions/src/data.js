@@ -34,33 +34,33 @@ exports.TestFacts = {
     }
 };
 
-exports.Rules = [
-    {
-        fact: 'airTemp',
-        operator: 'greaterThanInclusive',
-        value: 10
-    }, {
-        fact: 'feelsLike',
-        operator: 'greaterThanInclusive',
-        value: 12
-    }, {
-        fact: 'rainChance',
-        operator: 'lessThan',
-        value: 40
-    }, {
-        fact: 'dewTemp',
-        operator: 'lessThan',
-        value: {
-            fact: 'airTemp',
-        }
-    }, {
-        fact: 'visibility',
-        operator: 'greaterThan',
-        value: 10
-    }, {
-        fact: 'lightningChance',
-        operator: 'equal',
-        value: 1
-    }
-];
+// exports.Rules = [
+//     {
+//         fact: 'airTemp',
+//         operator: 'greaterThanInclusive',
+//         value: 10
+//     }, {
+//         fact: 'feelsLike',
+//         operator: 'greaterThanInclusive',
+//         value: 12
+//     }, {
+//         fact: 'rainChance',
+//         operator: 'lessThan',
+//         value: 40
+//     }, {
+//         fact: 'dewTemp',
+//         operator: 'lessThan',
+//         value: {
+//             fact: 'airTemp',
+//         }
+//     }, {
+//         fact: 'visibility',
+//         operator: 'greaterThan',
+//         value: 10
+//     }, {
+//         fact: 'lightningChance',
+//         operator: 'equal',
+//         value: 1
+//     }
+// ];
 

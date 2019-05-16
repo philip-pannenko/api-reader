@@ -21,9 +21,9 @@ class App extends Component {
     }
 
     fetchConditions = async () => {
-        //https://y1wohv6zb7.execute-api.us-east-1.amazonaws.com/prod/
+        //
         try {
-            let response = await fetch(`conditions`);
+            let response = await fetch(`https://y1wohv6zb7.execute-api.us-east-1.amazonaws.com/prod/conditions`);
             const json = await response.json();
 
             let events = json.payload.map((item, i) => {

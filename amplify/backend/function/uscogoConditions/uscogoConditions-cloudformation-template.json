@@ -60,7 +60,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "uscogo-20190502083522-deployment",
-					"S3Key": "amplify-builds/uscogoConditions-1556940471-latest-build.zip"
+					"S3Key": "amplify-builds/uscogoConditions-1557350290-latest-build.zip"
 				}
 			}
 		},

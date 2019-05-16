@@ -1,0 +1,7 @@
+{
+    "tableName": "uscogoDynamoDB",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S",
+    "sortKeyName": "sort",
+    "sortKeyType": "S"
+}

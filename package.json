@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-sdk": "^2.449.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-big-calendar": "^0.20.4",

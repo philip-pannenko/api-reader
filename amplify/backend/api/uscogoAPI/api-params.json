@@ -6,6 +6,13 @@
             "privacy": {
                 "open": true
             }
+        },
+        {
+            "name": "/groups",
+            "lambdaFunction": "uscogoConditions",
+            "privacy": {
+                "open": true
+            }
         }
     ],
     "resourceName": "uscogoAPI",
@@ -30,5 +37,6 @@
                 "Arn"
             ]
         }
-    ]
+    ],
+    "uuid": "0bff5fc5"
 }
